@@ -13,7 +13,7 @@
         }
     ],
     "require-dev": {
-        "pact-foundation/pact-php": "dev-ffi-next as 10.0.0",
+        "pact-foundation/pact-php": "dev-ffi as 10.0.0",
         "phpunit/phpunit": "^9.5"
     },
     "require": {

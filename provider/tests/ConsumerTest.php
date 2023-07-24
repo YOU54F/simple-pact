@@ -53,19 +53,13 @@ class ConsumerTest extends TestCase
         // $broker->setToken('pass'); // PactFlow Broker
 
         $selectors = (new ConsumerVersionSelectors())
-            ->addSelector('{"mainBranch":"true"');
+            ->addSelector('{"mainBranch":"true"}');
 
         // SETUP - Pact Broker Dynamic Retrieval Methods. 
         // Note: - Only use if not using Pact by Url, File or Directory
         // These should only be set, when running builds based on a provider change
 
         $broker->setConsumerVersionSelectors($selectors);
-
-
-        // ->setProviderBaseUrl(new Uri("http://localhost:8000"))
-        // ->setBrokerUri(new Uri("http://localhost:9292"))
-        // ->setPublishResults(true);
-
 
         // SETUP - Verify Pact By Url Methods.
         // If a Pact Url is provided, you should not add the dynamic retrieval methods
